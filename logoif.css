@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+  position: relative;
+  animation: moveSquares 2s ease-in-out forwards; 
+}
+
+
+@keyframes moveSquares {
+  0% {
+    
+    transform: scale(0);
+  }
+  100% {
+   
+    transform: scale(1);
+  }
+}
+ 
+.quadrado1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.quadrado2, .quadrado3, .quadrado4, .quadrado5, .quadrado7, .quadrado8, .quadrado9, .quadrado10, .quadrado11 {
+  width: 100px;
+  height: 100px;
+  border-radius: 9%;
+  background-color: #008F39;
+}
+
+.quadrado2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.quadrado3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.quadrado4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.quadrado5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.quadrado7 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.quadrado8 {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.quadrado9 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.quadrado10 {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.quadrado11 {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden; 
+}
+
+.anima-imagem {
+  position: relative;
+  width: 200px; 
+  animation: moverImagem 3s linear forwards; 
+}
+
+.container {
+  width: 100%;
+  overflow: visible; 
+}
+
+@keyframes moverImagem {
+  0% {
+    transform: translateX(0) translateY(0); 
+  }
+  100% {
+    transform: translateX(800px) translateY(-200px); 
+  }
+}
+
+.imagem {
+  width: 300%; 
+  height: 300%; 
+  animation: moverImagem 3s linear forwards; 
+}
+
+
+
